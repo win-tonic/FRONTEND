@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <p class="header__title">Danya Vintonyk</p>
+            <button class="header__create">Create Byk</button>
+        </div>
+    </header>
+    <div class="main--hidden">
+        <div class="main__inner">
+            <img class="main__image" src="byk.jpg" alt="velikiy">
+            <button class="main__kill">Kill Byk</button>
+        </div>
+    </div>
+    <script>
+        const createButton = document.querySelector('.header__create');
+        const killButton = document.querySelector('.main__kill');
+        const byk = document.querySelector('.main--hidden');
+        createButton.onclick = () => {
+            byk.classList.remove('main--hidden');
+            byk.classList.add('main--active');
+        }
+        killButton.onclick = () => {
+            byk.classList.remove('main--active');
+            byk.classList.add('main--hidden');
+        }
+    </script>
+</body>
+
+</html>
